@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lecture Audios</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      max-width: 600px;
+      margin: auto;
+      padding: 1em;
+      line-height: 1.5;
+      background: #fafafa;
+    }
+    h1 {
+      text-align: center;
+      font-size: 1.4em;
+      margin-bottom: 1em;
+    }
+    .lecture {
+      margin-bottom: 2em;
+      padding: 1em;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    audio {
+      width: 100%;
+      margin-bottom: 0.5em;
+    }
+    .info {
+      font-size: 0.9em;
+      color: #444;
+      margin-top: 0.5em;
+    }
+    .controls {
+      margin-bottom: 0.5em;
+      font-size: 0.9em;
+    }
+    select {
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Lecture Audios</h1>
+
+  <div class="lecture">
+    <audio controls>
+      <source src="lecture1.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+    <div class="controls">
+      Speed:
+      <select onchange="this.closest('.lecture').querySelector('audio').playbackRate=this.value">
+        <option value="0.75">0.75x</option>
+        <option value="1" selected>1x</option>
+        <option value="1.25">1.25x</option>
+        <option value="1.5">1.5x</option>
+        <option value="2">2x</option>
+      </select>
+    </div>
+    <div class="info">
+      A preliminary discussion on Steven Buechler's "What is critical about sociology"
+    </div>
+  </div>
+
+  <div class="lecture">
+    <audio controls>
+      <source src="lecture2.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+    <div class="controls">
+      Speed:
+      <select onchange="this.closest('.lecture').querySelector('audio').playbackRate=this.value">
+        <option value="0.75">0.75x</option>
+        <option value="1" selected>1x</option>
+        <option value="1.25">1.25x</option>
+        <option value="1.5">1.5x</option>
+        <option value="2">2x</option>
+      </select>
+    </div>
+    <div class="info">
+      Deliberations on theory,Theory, AI and a lot more
+    </div>
+  </div>
+
+  <div class="lecture">
+    <audio controls>
+      <source src="lecture-audios/lecture3.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+    <div class="controls">
+      Speed:
+      <select onchange="this.closest('.lecture').querySelector('audio').playbackRate=this.value">
+        <option value="0.75">0.75x</option>
+        <option value="1" selected>1x</option>
+        <option value="1.25">1.25x</option>
+        <option value="1.5">1.5x</option>
+        <option value="2">2x</option>
+      </select>
+    </div>
+    <div class="info">
+      Lecture 3 – Case study discussion. Reading: Pages 45–67.
+    </div>
+  </div>
+
+</body>
+</html>
