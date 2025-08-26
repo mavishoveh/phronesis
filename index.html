@@ -3,50 +3,92 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lecture Audios</title>
+  <title>Sociology Lecture Recordings</title>
+
+  <!-- Latin Modern font -->
+  <link href="https://fonts.googleapis.com/css2?family=Latin+Modern+Roman&display=swap" rel="stylesheet">
+
   <style>
     body {
-      font-family: sans-serif;
-      max-width: 600px;
+      font-family: 'Latin Modern Roman', serif;
+      max-width: 700px;
       margin: auto;
-      padding: 1em;
-      line-height: 1.5;
-      background: #fafafa;
+      padding: 1.5em;
+      line-height: 1.6;
+      background: #f4f1ee;
+      color: #2d2d2d;
     }
+
     h1 {
       text-align: center;
-      font-size: 1.4em;
-      margin-bottom: 1em;
+      font-size: 1.8em;
+      color: #4a3f35;
+      margin-bottom: 0.3em;
     }
+
+    p.description {
+      text-align: center;
+      font-size: 0.95em;
+      color: #555;
+      margin-bottom: 2em;
+      font-style: italic;
+    }
+
     .lecture {
       margin-bottom: 2em;
-      padding: 1em;
-      background: #fff;
+      padding: 1.5em;
+      background: #fff3e0; /* pale paper color */
+      border: 2px solid #df0424; /* old paper border */
       border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      box-shadow: 4px 4px 0px #056567; /* retro block shadow */
+      font-family: 'Latin Modern Roman', serif;
     }
+
     audio {
       width: 100%;
+      outline: none;
+      border-radius: 4px;
+      background: #fdf1e6; /* lighter retro background */
+      box-shadow: inset 1px 1px 3px rgba(0,0,0,0.1);
       margin-bottom: 0.5em;
     }
-    .info {
-      font-size: 0.9em;
-      color: #444;
-      margin-top: 0.5em;
-    }
+
     .controls {
       margin-bottom: 0.5em;
       font-size: 0.9em;
+      color: #333;
     }
+
     select {
       padding: 2px 6px;
       border-radius: 4px;
+      border: 1px solid #d6a76c;
+      background: #fff7f0;
+      font-family: 'Latin Modern Roman', serif;
+    }
+
+    .info {
+      font-size: 0.9em;
+      color: #5a4b3d;
+      margin-top: 0.5em;
+      font-style: italic;
+    }
+
+    .disclaimer {
+      font-size: 0.8em;
+      color: #888;
+      margin-top: 2em;
+      text-align: center;
+      font-style: italic;
     }
   </style>
 </head>
 <body>
 
-  <h1>Lecture Audios</h1>
+  <h1>Sociology Lecture Recordings</h1>
+  <p class="description">
+    These are the lecture recordings from a sociology classroom. The content is provided for educational purposes and encourages critical thinking.
+  </p>
 
   <div class="lecture">
     <audio controls>
@@ -84,29 +126,15 @@
       </select>
     </div>
     <div class="info">
-      Deliberations on theory,Theory, AI and a lot more
+      Deliberations on theory, Theory, AI and a lot more
     </div>
   </div>
 
-  <div class="lecture">
-    <audio controls>
-      <source src="lecture-audios/lecture3.mp3" type="audio/mpeg">
-      Your browser does not support the audio element.
-    </audio>
-    <div class="controls">
-      Speed:
-      <select onchange="this.closest('.lecture').querySelector('audio').playbackRate=this.value">
-        <option value="0.75">0.75x</option>
-        <option value="1" selected>1x</option>
-        <option value="1.25">1.25x</option>
-        <option value="1.5">1.5x</option>
-        <option value="2">2x</option>
-      </select>
-    </div>
-    <div class="info">
-      Lecture 3 – Case study discussion. Reading: Pages 45–67.
-    </div>
-  </div>
+ 
+
+  <p class="disclaimer">
+    Provided for educational purposes and for fostering critical thinking.
+  </p>
 
 </body>
 </html>
