@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sociology Lecture Recordings</title>
 
-  <!-- Latin Modern font -->
   <link href="https://fonts.googleapis.com/css2?family=Latin+Modern+Roman&display=swap" rel="stylesheet">
 
   <style>
@@ -37,18 +36,16 @@
     .lecture {
       margin-bottom: 2em;
       padding: 1.5em;
-      background: #fff3e0; /* pale paper color */
-      border: 2px solid #df0424; /* old paper border */
+      background: #fff3e0;
+      border: 2px solid #df0424;
       border-radius: 8px;
-      box-shadow: 4px 4px 0px #056567; /* retro block shadow */
-      font-family: 'Latin Modern Roman', serif;
+      box-shadow: 4px 4px 0px #056567;
     }
 
     audio {
       width: 100%;
-      outline: none;
       border-radius: 4px;
-      background: #fdf1e6; /* lighter retro background */
+      background: #fdf1e6;
       box-shadow: inset 1px 1px 3px rgba(0,0,0,0.1);
       margin-bottom: 0.5em;
     }
@@ -86,271 +83,53 @@
 <body>
 
   <h1>Sociology Lecture Recordings</h1>
-  <p class="description">
-    These are the lecture recordings from a sociology classroom. 
-  </p>
+  <p class="description">These are the lecture recordings from a sociology classroom.</p>
 
-  <div class="lecture">
-    <audio controls>
-      <source src="lecture1.mp3" type="audio/mpeg">
-      Your browser does not support the audio element.
-    </audio>
-    <div class="controls">
-      Speed:
-      <select onchange="this.closest('.lecture').querySelector('audio').playbackRate=this.value">
-        <option value="0.75">0.75x</option>
-        <option value="1" selected>1x</option>
-        <option value="1.25">1.25x</option>
-        <option value="1.5">1.5x</option>
-        <option value="2">2x</option>
-      </select>
-    </div>
-    <div class="info">
-      A preliminary discussion on Steven Buechler's "What is critical about sociology"
-    </div>
-  </div>
+  <div id="lectures"></div>
 
-  <div class="lecture">
-    <audio controls>
-      <source src="lecture2.mp3" type="audio/mpeg">
-      Your browser does not support the audio element.
-    </audio>
-    <div class="controls">
-      Speed:
-      <select onchange="this.closest('.lecture').querySelector('audio').playbackRate=this.value">
-        <option value="0.75">0.75x</option>
-        <option value="1" selected>1x</option>
-        <option value="1.25">1.25x</option>
-        <option value="1.5">1.5x</option>
-        <option value="2">2x</option>
-      </select>
-    </div>
-    <div class="info">
-      Deliberations on theory, Theory, AI and a lot more
-    </div>
-  </div>
+  <p class="disclaimer">Provided for educational purposes.</p>
 
-  <div class="lecture">
-    <audio controls>
-      <source src="lecture3.mp3" type="audio/mpeg">
-      Your browser does not support the audio element.
-    </audio>
-    <div class="controls">
-      Speed:
-      <select onchange="this.closest('.lecture').querySelector('audio').playbackRate=this.value">
-        <option value="0.75">0.75x</option>
-        <option value="1" selected>1x</option>
-        <option value="1.25">1.25x</option>
-        <option value="1.5">1.5x</option>
-        <option value="2">2x</option>
-      </select>
-    </div>
-    <div class="info">
-      Explaining Modernity, Modernity w.r.t tradition, Ambedkar
-    </div>
-  </div>
+  <script>
+    const lectures = [
+      { file: 'lecture1.mp3', info: "A preliminary discussion on Steven Buechler's 'What is critical about sociology'" },
+      { file: 'lecture2.mp3', info: "Deliberations on theory, Theory, AI and a lot more" },
+      { file: 'lecture3.mp3', info: "Explaining Modernity, Modernity w.r.t tradition, Ambedkar" },
+      { file: 'lecture4.mp3', info: "Unpacking modernity and the social." },
+      { file: 'lecture5.mp3', info: "Introduction to Marx, and what Marx did to history." },
+      { file: 'lecture6.mp3', info: "Marxian afterlives (Incomplete lecture)." },
+      { file: 'lecture7.mp3', info: "We are all equals." },
+      { file: 'lecture8.mp3', info: "Responding to a theory vs Responding to a world." },
+      { file: 'lecture9.mp3', info: "The dialectics of scarcity." },
+      { file: 'lecture10.mp3', info: "Reading the manifesto of the class struggle and camera obscura." },
+      { file: 'lecture11.mp3', info: "A night time of Marx or a Life time of Marx (adios Marx)." },
+      { file: 'lecture12.mp3', info: "An introduction to Weber." },
+      { file: 'lecture13.mp3', info: "Discussing Brubaker's description on Weber." }
+    ];
 
-  <div class="lecture">
-    <audio controls>
-      <source src="lecture4.mp3" type="audio/mpeg">
-      Your browser does not support the audio element.
-    </audio>
-    <div class="controls">
-      Speed:
-      <select onchange="this.closest('.lecture').querySelector('audio').playbackRate=this.value">
-        <option value="0.75">0.75x</option>
-        <option value="1" selected>1x</option>
-        <option value="1.25">1.25x</option>
-        <option value="1.5">1.5x</option>
-        <option value="2">2x</option>
-      </select>
-    </div>
-    <div class="info">
-      Unpacking modernity and the social.
-    </div>
-  </div>
+    const container = document.getElementById('lectures');
 
-  <div class="lecture">
-    <audio controls>
-      <source src="lecture5.mp3" type="audio/mpeg">
-      Your browser does not support the audio element.
-    </audio>
-    <div class="controls">
-      Speed:
-      <select onchange="this.closest('.lecture').querySelector('audio').playbackRate=this.value">
-        <option value="0.75">0.75x</option>
-        <option value="1" selected>1x</option>
-        <option value="1.25">1.25x</option>
-        <option value="1.5">1.5x</option>
-        <option value="2">2x</option>
-      </select>
-    </div>
-    <div class="info">
-      Introduction to Marx, and what Marx did to history.
-    </div>
-  </div>
-
-  <div class="lecture">
-    <audio controls>
-      <source src="lecture6.mp3" type="audio/mpeg">
-      Your browser does not support the audio element.
-    </audio>
-    <div class="controls">
-      Speed:
-      <select onchange="this.closest('.lecture').querySelector('audio').playbackRate=this.value">
-        <option value="0.75">0.75x</option>
-        <option value="1" selected>1x</option>
-        <option value="1.25">1.25x</option>
-        <option value="1.5">1.5x</option>
-        <option value="2">2x</option>
-      </select>
-    </div>
-    <div class="info">
-      Marxian afterlives (Unfortunately the audio recorder stopped working halfway through the lecture. Therefore the lecture is an incomplete harikadha on Marx, but worth listening to.)
-    </div>
-  </div>
-  <div class="lecture">
-    <audio controls>
-      <source src="lecture7.mp3" type="audio/mpeg">
-      Your browser does not support the audio element.
-    </audio>
-    <div class="controls">
-      Speed:
-      <select onchange="this.closest('.lecture').querySelector('audio').playbackRate=this.value">
-        <option value="0.75">0.75x</option>
-        <option value="1" selected>1x</option>
-        <option value="1.25">1.25x</option>
-        <option value="1.5">1.5x</option>
-        <option value="2">2x</option>
-      </select>
-    </div>
-    <div class="info">
-      We are all equals.
-    </div>
-  </div>
-
- 
-  <div class="lecture">
-    <audio controls>
-      <source src="lecture8.mp3" type="audio/mpeg">
-      Your browser does not support the audio element.
-    </audio>
-    <div class="controls">
-      Speed:
-      <select onchange="this.closest('.lecture').querySelector('audio').playbackRate=this.value">
-        <option value="0.75">0.75x</option>
-        <option value="1" selected>1x</option>
-        <option value="1.25">1.25x</option>
-        <option value="1.5">1.5x</option>
-        <option value="2">2x</option>
-      </select>
-    </div>
-    <div class="info">
-      Responding to a theory vs Responding to a world
-    </div>
-  </div>
-
-  <div class="lecture">
-    <audio controls>
-      <source src="lecture9.mp3" type="audio/mpeg">
-      Your browser does not support the audio element.
-    </audio>
-    <div class="controls">
-      Speed:
-      <select onchange="this.closest('.lecture').querySelector('audio').playbackRate=this.value">
-        <option value="0.75">0.75x</option>
-        <option value="1" selected>1x</option>
-        <option value="1.25">1.25x</option>
-        <option value="1.5">1.5x</option>
-        <option value="2">2x</option>
-      </select>
-    </div>
-    <div class="info">
-      The dialectics of scarcity.
-    </div>
-  </div>
-  <div class="lecture">
-    <audio controls>
-      <source src="lecture10.mp3" type="audio/mpeg">
-      Your browser does not support the audio element.
-    </audio>
-    <div class="controls">
-      Speed:
-      <select onchange="this.closest('.lecture').querySelector('audio').playbackRate=this.value">
-        <option value="0.75">0.75x</option>
-        <option value="1" selected>1x</option>
-        <option value="1.25">1.25x</option>
-        <option value="1.5">1.5x</option>
-        <option value="2">2x</option>
-      </select>
-    </div>
-    <div class="info">
-      Reading the manifesto of the class struggle and camera obscura.
-    </div>
-  </div>
-  <div class="lecture">
-    <audio controls>
-      <source src="lecture11.mp3" type="audio/mpeg">
-      Your browser does not support the audio element.
-    </audio>
-    <div class="controls">
-      Speed:
-      <select onchange="this.closest('.lecture').querySelector('audio').playbackRate=this.value">
-        <option value="0.75">0.75x</option>
-        <option value="1" selected>1x</option>
-        <option value="1.25">1.25x</option>
-        <option value="1.5">1.5x</option>
-        <option value="2">2x</option>
-      </select>
-    </div>
-    <div class="info">
-      A night time of Marx or a Life time of Marx ( adios Marx )
-    </div>
-  </div>
-  <div class="lecture">
-    <audio controls>
-      <source src="lecture12.mp3" type="audio/mpeg">
-      Your browser does not support the audio element.
-    </audio>
-    <div class="controls">
-      Speed:
-      <select onchange="this.closest('.lecture').querySelector('audio').playbackRate=this.value">
-        <option value="0.75">0.75x</option>
-        <option value="1" selected>1x</option>
-        <option value="1.25">1.25x</option>
-        <option value="1.5">1.5x</option>
-        <option value="2">2x</option>
-      </select>
-    </div>
-    <div class="info">
-      An introduction to Weber
-    </div>
-  </div>
-  <div class="lecture">
-    <audio controls>
-      <source src="lecture13.mp3" type="audio/mpeg">
-      Your browser does not support the audio element.
-    </audio>
-    <div class="controls">
-      Speed:
-      <select onchange="this.closest('.lecture').querySelector('audio').playbackRate=this.value">
-        <option value="0.75">0.75x</option>
-        <option value="1" selected>1x</option>
-        <option value="1.25">1.25x</option>
-        <option value="1.5">1.5x</option>
-        <option value="2">2x</option>
-      </select>
-    </div>
-    <div class="info">
-      Discussing Brubakers description on Marx
-    </div>
-  </div>
-
- 
-
-  <p class="disclaimer">
-    Provided for educational purposes.
-  </p>
+    lectures.forEach((lecture, i) => {
+      container.innerHTML += `
+        <div class="lecture">
+          <audio controls>
+            <source src="${lecture.file}" type="audio/mpeg">
+            Your browser does not support the audio element.
+          </audio>
+          <div class="controls">
+            Speed:
+            <select onchange="this.closest('.lecture').querySelector('audio').playbackRate=this.value">
+              <option value="0.75">0.75x</option>
+              <option value="1" selected>1x</option>
+              <option value="1.25">1.25x</option>
+              <option value="1.5">1.5x</option>
+              <option value="2">2x</option>
+            </select>
+          </div>
+          <div class="info">${lecture.info}</div>
+        </div>
+      `;
+    });
+  </script>
 
 </body>
 </html>
