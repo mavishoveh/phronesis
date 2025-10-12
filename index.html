@@ -87,7 +87,7 @@
 
   <h1>Sociology Lecture Recordings</h1>
   <p class="description">
-    These are the lecture recordings from a sociology classroom. The content is provided for educational purposes and encourages critical thinking.
+    These are the lecture recordings from a sociology classroom. 
   </p>
 
   <div class="lecture">
@@ -326,11 +326,30 @@
       An introduction to Weber
     </div>
   </div>
+  <div class="lecture">
+    <audio controls>
+      <source src="lecture13.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+    <div class="controls">
+      Speed:
+      <select onchange="this.closest('.lecture').querySelector('audio').playbackRate=this.value">
+        <option value="0.75">0.75x</option>
+        <option value="1" selected>1x</option>
+        <option value="1.25">1.25x</option>
+        <option value="1.5">1.5x</option>
+        <option value="2">2x</option>
+      </select>
+    </div>
+    <div class="info">
+      Discussing Brubakers description on Marx
+    </div>
+  </div>
 
  
 
   <p class="disclaimer">
-    Provided for educational purposes and for fostering critical thinking.
+    Provided for educational purposes.
   </p>
 
 </body>
